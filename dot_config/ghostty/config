@@ -1,8 +1,7 @@
-theme = TokyoNight Night
+theme = Catppuccin Mocha
 
 font-family = "DaddyTimeMono Nerd Font"
 font-size = 11
 
-background-image = "~/Pictures/Terminal/mountain-dark.jpg"
-background-image-fit = cover
-background-image-opacity = 0.1
+background-opacity = 0.92
+

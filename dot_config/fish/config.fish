@@ -6,6 +6,7 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 #    # smth smth
 
 zoxide init fish | source
+starship init fish | source
 set -gx EDITOR nvim
 set -gx EDITOR nvim
 set -gx VISUAL nvim
