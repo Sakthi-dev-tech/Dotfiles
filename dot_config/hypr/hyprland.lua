@@ -60,6 +60,7 @@ hl.on("hyprland.start", function()
   hl.exec_cmd("waypaper --restore")
   hl.exec_cmd("waybar")
   hl.exec_cmd("hyprsunset")
+  hl.exec_cmd("swaync")
 end)
 
 -------------------------------
@@ -291,6 +292,10 @@ hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("lua ~/.config/hypr/scripts/rofi-apps.l
 
 -- Clipboard
 hl.bind("SUPER + V", hl.dsp.exec_cmd("sh -c 'cliphist list | wofi --dmenu | cliphist decode | wl-copy'"))
+
+-- Screenshot
+hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
+
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
