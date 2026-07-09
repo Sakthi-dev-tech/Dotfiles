@@ -56,8 +56,8 @@ local menu        = "hyprlauncher"
 -- end)
 
 hl.on("hyprland.start", function ()
-	h1.exec_cmd("wl-paste --type text --watch cliphist store")
-	h1.exec_cmd("wl-paste --type image --watch cliphist store")
+	hl.exec_cmd("wl-paste --type text --watch cliphist store")
+	hl.exec_cmd("wl-paste --type image --watch cliphist store")
 end)
 
 -------------------------------
