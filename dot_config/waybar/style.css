@@ -50,6 +50,7 @@ tooltip label {
   color: @black
 }
 
+#custom-power,
 #pulseaudio,
 #network,
 #battery {
@@ -76,4 +77,12 @@ tooltip label {
 
 #network {
   background-color: @network-bg;
+}
+
+#custom-power {
+    color: #f38ba8;
+}
+
+#custom-power:hover {
+    text-shadow: 0 0 5px #f38ba8, 0 0 12px #f38ba8; 
 }
