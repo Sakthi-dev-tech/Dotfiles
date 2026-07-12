@@ -1,0 +1,19 @@
+@import "mocha.css";
+
+/* GENERAL */
+@define-color white #e8e8ad;
+
+/* CLOCK */
+@define-color clock-bg transparent;
+
+/* WORKSPACES */
+@define-color workspace-active-bg @peach;
+
+/* BATTERY */
+@define-color battery-bg @green;
+
+/* PULSEAUDIO */
+@define-color audio-bg #c3aad8;
+
+/* NETWORK */
+@define-color network-bg @teal;
