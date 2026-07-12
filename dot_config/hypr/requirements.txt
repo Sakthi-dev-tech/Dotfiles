@@ -1,0 +1,7 @@
+hyprland
+hyprlock
+hyprsunset
+waybar
+swaync
+wl-clipboard
+cliphist
