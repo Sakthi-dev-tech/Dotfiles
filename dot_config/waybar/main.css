@@ -2,6 +2,7 @@
 
 /* GENERAL */
 @define-color white #e8e8ad;
+@define-color black #121212;
 
 /* CLOCK */
 @define-color clock-bg transparent;

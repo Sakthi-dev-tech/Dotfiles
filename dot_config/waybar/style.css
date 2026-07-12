@@ -31,7 +31,7 @@ tooltip label {
 }
 
 #workspaces {
-  background: black;
+  background: @black;
   border-radius: 100px;
 }
 
@@ -39,7 +39,7 @@ tooltip label {
     transition: all 200ms ease-in-out;
     padding: 0 5px;
     border-radius: 100px;
-    background: black;
+    background: @black;
     color: @white;
     border-bottom: 3px solid transparent;
 }
@@ -47,7 +47,7 @@ tooltip label {
 #workspaces button.active {
   min-width: 50px;
   background-color: @workspace-active-bg;
-  color: black
+  color: @black
 }
 
 #pulseaudio,
