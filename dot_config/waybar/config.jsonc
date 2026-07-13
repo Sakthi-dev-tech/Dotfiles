@@ -7,7 +7,8 @@
     "hyprland/workspaces"
   ],
   "modules-center": [
-    "clock"
+    "clock",
+    "mpris"
   ],
   "modules-right": [
     "network",
@@ -67,7 +68,33 @@
     "tooltip": false,
     "on-click": "wlogout --protocol layer-shell"
   },
+  "custom/music": {
+    "format": "🎵 {}",
+    "escape": true,
+    "max-length": 40,
+    "exec": "playerctl metadata --format '{{artist}} - {{title}}' -F",
+    "on-click": "playerctl -p spotify play-pause",
+    "on-click-right": "playerctl -p spotify next",
+    "on-click-middle": "playerctl -p spotify previous"
+  },
   "hyprland/workspaces": {
     "format": "{name}"
+  },
+  "mpris": {
+    "format": "{player_icon} {artist} - {title}",
+    "format-paused": "{player_icon} <i>{artist} - {title}</i>",
+    "max-length": 30,
+    "player-icons": {
+      "default": "🎵",
+      "spotify": "",
+      "firefox": ""
+    },
+    "status-icons": {
+      "paused": "⏸",
+      "playing": "▶"
+    },
+    "on-click": "playerctl play-pause",
+    "on-scroll-down": "playerctl next",
+    "on-scroll-up": "playerctl previous"
   }
 }

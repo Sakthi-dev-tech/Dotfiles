@@ -87,3 +87,23 @@ tooltip label {
 #custom-power:hover {
     text-shadow: 0 0 5px #f38ba8, 0 0 12px #f38ba8; 
 }
+
+#mpris {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    padding: 0px 10px;
+    margin: 5px 0px;
+    border-radius: 8px;
+}
+
+/* Style when media is playing */
+#mpris.playing {
+    background-color: #a6e3a1;
+    color: #11111b;
+}
+
+/* Style when media is paused */
+#mpris.paused {
+    background-color: #313244;
+    color: #a6adc8;
+}
