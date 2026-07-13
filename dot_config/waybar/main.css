@@ -5,16 +5,16 @@
 @define-color black #121212;
 
 /* CLOCK */
-@define-color clock-bg transparent;
+@define-color clock-colour transparent;
 
 /* WORKSPACES */
 @define-color workspace-active-bg @peach;
 
 /* BATTERY */
-@define-color battery-bg @green;
+@define-color battery-colour @green;
 
 /* PULSEAUDIO */
-@define-color audio-bg #c3aad8;
+@define-color audio-colour #c3aad8;
 
 /* NETWORK */
-@define-color network-bg @teal;
+@define-color network-colour @teal;

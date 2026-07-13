@@ -54,33 +54,34 @@ tooltip label {
 #pulseaudio,
 #network,
 #battery {
-  color: #121212;
   padding: 0 5px;
   margin: 0 5px;
   border-radius: 5px;
+  background-color: #121212;
 }
 
 #battery {
-  background-color: @battery-bg;
+  color: @battery-colour;
 }
 
 #pulseaudio {
-  background-color: @audio-bg;
+  color: @audio-colour;
 }
 
 #clock {
-    background-color: @clock-bg;
+    background-color: @clock-colour;
     color: white;
     font-weight: 700;
     margin: 0 10px;
 }
 
 #network {
-  background-color: @network-bg;
+  color: @network-colour;
 }
 
 #custom-power {
     color: #f38ba8;
+    background-color: transparent;
 }
 
 #custom-power:hover {
