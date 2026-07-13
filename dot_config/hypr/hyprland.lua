@@ -299,8 +299,8 @@ hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("lua ~/.config/hypr/scripts/rofi-apps.l
 hl.bind("SUPER + V", hl.dsp.exec_cmd("sh -c 'cliphist list | wofi --dmenu | cliphist decode | wl-copy'"))
 
 -- Screenshot
-hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
-hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
+hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
+hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
 
 -- Hyprlock
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("hyprlock"))
