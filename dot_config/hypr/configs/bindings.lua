@@ -43,6 +43,8 @@ hl.bind("SUPER + V", hl.dsp.exec_cmd("sh -c 'cliphist list | wofi --dmenu | clip
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
 
+hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m window"))
+hl.bind("SUPER + S", hl.dsp.exec_cmd("hyprshot -m region"))
 -- Hyprlock
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("hyprlock"))
 
@@ -55,8 +57,8 @@ for i = 1, 10 do
 end
 
 -- Example special workspace (scratchpad)
-hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+-- hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
+-- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))

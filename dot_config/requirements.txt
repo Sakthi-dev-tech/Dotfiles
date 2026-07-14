@@ -1,6 +1,7 @@
 hyprland
 hyprlock
 hyprsunset
+hyprshot
 waybar
 swaync
 wl-clipboard
