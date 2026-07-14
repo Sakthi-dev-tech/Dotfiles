@@ -73,7 +73,7 @@
     "format": "{ifname}",
     "format-wifi": "  {essid}",
     "format-ethernet": "  {ifname}",
-    "format-disconnected": "",
+    "format-disconnected": "󰖪 Disconnected",
     "tooltip-format": "{ifname}",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
     "tooltip-format-ethernet": " {ifname}",
