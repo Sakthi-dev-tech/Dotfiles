@@ -9,3 +9,11 @@ hl.monitor({
   position = "auto",
   scale    = "auto",
 })
+
+-- MacBook Air Monitor
+hl.monitor({
+  output   = "eDP-1",
+  mode     = "preferred",
+  position = "auto",
+  scale    = "1.6",
+})
