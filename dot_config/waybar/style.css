@@ -57,6 +57,7 @@ tooltip label {
 #custom-power,
 #pulseaudio,
 #network,
+#bluetooth,
 #battery {
   padding: 0 10px;
   font-weight: bold;
@@ -82,6 +83,10 @@ tooltip label {
 
 #network {
   color: @network-colour;
+}
+
+#bluetooth {
+  color: @bluetooth-colour;
 }
 
 #custom-power {
