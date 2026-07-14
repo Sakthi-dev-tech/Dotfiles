@@ -50,6 +50,10 @@ tooltip label {
   color: @black
 }
 
+#mpris {
+  font-weight: bold;
+}
+
 #custom-power,
 #pulseaudio,
 #network,
