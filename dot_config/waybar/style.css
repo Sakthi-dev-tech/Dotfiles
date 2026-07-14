@@ -2,7 +2,7 @@
 
 * {
     border: none;
-    font-family: "DaddyTimeMono Nerd Font Propo", "JetBrains Mono Nerd Font Propo", Arial, sans-serif;
+    font-family: "SF Pro Display", "JetBrainsMonoNL Nerd Font Propo", Arial, sans-serif;
     font-size: 14px;
 
     min-height: 0;
@@ -54,10 +54,11 @@ tooltip label {
 #pulseaudio,
 #network,
 #battery {
-  padding: 0 5px;
+  padding: 0 10px;
+  font-weight: bold;
   margin: 0 5px;
-  border-radius: 5px;
-  background-color: #121212;
+  border-radius: 20px;
+  background-color: #1e1e2e;
 }
 
 #battery {
