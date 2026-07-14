@@ -27,11 +27,34 @@ hl.gesture({
   action = "workspace"
 })
 
+hl.gesture({
+  fingers = 4,
+  direction = "down",
+  action = function()
+    hl.exec_cmd("playerctl play-pause")
+  end
+})
+
+hl.gesture({
+  fingers = 4,
+  direction = "right",
+  action = function()
+    hl.exec_cmd("playerctl next")
+  end
+})
+
+hl.gesture({
+  fingers = 4,
+  direction = "left",
+  action = function()
+    hl.exec_cmd("playerctl previous")
+  end
+})
 -- Example per-device config
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
 
 -- Lenovo Trackpad
 hl.device {
-    name = "syna2ba6:00-06cb:cfd8-touchpad",
-    sensitivity = 0.68
+  name = "syna2ba6:00-06cb:cfd8-touchpad",
+  sensitivity = 0.68
 }
