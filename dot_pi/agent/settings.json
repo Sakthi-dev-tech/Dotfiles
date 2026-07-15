@@ -1,0 +1,12 @@
+{
+  "lastChangelogVersion": "0.80.7",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.5",
+  "defaultThinkingLevel": "medium",
+  "packages": [
+    "npm:pi-subagents",
+    "npm:@dietrichgebert/ponytail",
+    "npm:pi-mcp-adapter"
+  ],
+  "theme": "dark"
+}
