@@ -7,3 +7,4 @@ swaync
 wl-clipboard
 cliphist
 wlogout
+brightnessctl

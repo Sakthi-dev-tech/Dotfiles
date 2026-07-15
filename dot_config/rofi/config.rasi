@@ -1,3 +1,1 @@
-//@theme "/usr/share/rofi/themes/Catppuccin-Mocha.rasi"
-
-@theme "/usr/share/rofi/themes/Catppuccin-Mocha.rasi"
+@theme "~/.config/rofi/assets/catppuccin-mocha.rasi"
