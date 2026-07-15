@@ -29,6 +29,25 @@ hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 
+-- Resize windows
+local resizeStep = 30
+hl.bind(mainMod .. " + CTRL + l",
+  hl.dsp.window.resize({ x = resizeStep, y = 0, relative = true }),
+  { repeating = true }
+)
+hl.bind(mainMod .. " + CTRL + h",
+  hl.dsp.window.resize({ x = -resizeStep, y = 0, relative = true }),
+  { repeating = true }
+)
+hl.bind(mainMod .. " + CTRL + k",
+  hl.dsp.window.resize({ x = 0, y = -resizeStep, relative = true }),
+  { repeating = true }
+)
+hl.bind(mainMod .. " + CTRL + j",
+  hl.dsp.window.resize({ x = 0, y = resizeStep, relative = true }),
+  { repeating = true }
+)
+
 -- Open file manager
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("lua ~/.config/hypr/scripts/rofi-apps.lua"), {
   description = "Open Rofi app launcher"
