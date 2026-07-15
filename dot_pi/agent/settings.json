@@ -1,12 +1,19 @@
 {
-  "lastChangelogVersion": "0.80.7",
+  "lastChangelogVersion": "0.80.6",
+  "theme": "dark",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.5",
+  "defaultModel": "gpt-5.6-sol",
   "defaultThinkingLevel": "medium",
   "packages": [
+    "npm:pi-web-access",
+    "npm:pi-mcp-adapter",
     "npm:pi-subagents",
-    "npm:@dietrichgebert/ponytail",
-    "npm:pi-mcp-adapter"
+    "npm:@juicesharp/rpiv-todo",
+    "npm:@dietrichgebert/ponytail"
   ],
-  "theme": "dark"
+  "enabledModels": [
+    "openai-codex/gpt-5.6-sol",
+    "openai-codex/gpt-5.6-terra",
+    "openai-codex/gpt-5.5"
+  ]
 }
