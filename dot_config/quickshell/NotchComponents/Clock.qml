@@ -1,8 +1,12 @@
 import Quickshell
 import QtQuick
 
+import ".."
+
 Text {
-    text: Qt.formatDateTime(clock.date, "hh:mm")
+    readonly property alias date: systemClock.date
+
+    text: Qt.formatDateTime(systemClock.date, "hh:mm")
     color: "white"
     anchors.centerIn: parent
 
@@ -13,7 +17,7 @@ Text {
     }
 
     SystemClock {
-        id: clock
+        id: systemClock
         precision: SystemClock.Minutes
     }
 }

@@ -8,15 +8,25 @@ PanelWindow {
         right: true
     }
 
-    implicitHeight: 35
+    implicitHeight: 300 // create rendering surface of this height
+    exclusiveZone: 35 // bar reserves this height from the top
     color: "transparent"
+    mask: Region {
+        item: topBar
+        Region { item: notch }
+    }
 
     Item {
-      id: topBar
-        anchors.fill: parent
-        anchors.leftMargin: 10
-        anchors.rightMargin: 10
-        anchors.topMargin: 5
+        id: topBar
+        height: 30
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+            leftMargin: 10
+            rightMargin: 10
+            topMargin: 5
+        }
 
         Workspaces {
             anchors.left: parent.left
@@ -24,7 +34,11 @@ PanelWindow {
         }
 
         Notch {
-            anchors.centerIn: parent
+            id: notch
+            anchors {
+                top: parent.top
+                horizontalCenter: parent.horizontalCenter
+            }
         }
 
         Widgets {
