@@ -9,7 +9,6 @@ RowLayout {
 
     Network {}
     Bluetooth {}
-    Volume {}
     Battery {}
 
     PowerButton {}
