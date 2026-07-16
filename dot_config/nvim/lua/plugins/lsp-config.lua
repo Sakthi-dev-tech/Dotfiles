@@ -20,6 +20,14 @@ return {
       })
       vim.lsp.enable("rust_analyzer")
 
+      vim.lsp.config("qmlls", {
+        cmd = { 'qmlls6' }, -- Change to 'qmlls6' if using a specific Qt6 binary
+        filetypes = { 'qml', 'qmljs' },
+        root_markers = { '.git', 'qmldir' },
+        single_file_support = true,
+      })
+      vim.lsp.enable("qmlls")
+
       vim.diagnostic.config({
         virtual_text = true,
         signs = false,
@@ -90,7 +98,7 @@ return {
       "neovim/nvim-lspconfig",
     },
     opts = {
-      ensure_installed = { "lua_ls", "pyright", "ts_ls", "rust_analyzer" },
+      ensure_installed = { "lua_ls", "pyright", "ts_ls", "rust_analyzer", "qmlls" },
       automatic_install = true,
       automatic_enable = true,
     },
