@@ -29,6 +29,10 @@ Rectangle {
     }
     radius: 60
 
+    function clearOtherFlags () {
+      notch.showVolumeSlider = false
+    }
+
     Clock {
         id: clock
         opacity: {

@@ -8,3 +8,7 @@ wl-clipboard
 cliphist
 wlogout
 brightnessctl
+
+# FONTS
+JetBrainsMono Nerd Font
+SF Pro Display

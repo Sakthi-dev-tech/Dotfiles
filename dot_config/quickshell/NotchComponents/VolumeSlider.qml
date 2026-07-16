@@ -49,6 +49,19 @@ Item {
                 pixelSize: 20
             }
         }
+
+        Text {
+            text: root.level + "%"
+            anchors.centerIn: parent
+
+            color: Theme.white
+
+            font {
+                family: "SF Pro Display"
+                pixelSize: 14
+                bold: true
+            }
+        }
     }
 
     MouseArea {
