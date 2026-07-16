@@ -21,26 +21,8 @@ Rectangle {
     return String.fromCodePoint(0xF007A + (Math.floor(level / 10) - 1))
   }
   
-  readonly property bool isLaptop: {
-    // Binding to the size/count ensures QML re-evaluates this if UPower loads devices later
-    let count = UPower.devices.count ?? UPower.devices.length ?? 0;
-
-    for (let i = 0; i < count; i++) {
-      // Depending on how Quickshell exposes ObjectModel in your Qt version,
-      // it might use .get(i) or standard array indexing [i]
-      let device = typeof UPower.devices.get === "function" 
-                   ? UPower.devices.get(i) 
-                   : UPower.devices[i];
-      
-      if (device && device.isLaptopBattery) {
-        return true;
-      }
-    }
-    return false;
-  }
-
   // Only renders battery widget if device is a laptop
-  visible: isLaptop
+  visible: level > 0
 
   implicitWidth: row.implicitWidth + Constants.widgetWidthPadding
   implicitHeight: row.implicitHeight + Constants.widgetHeightPadding
