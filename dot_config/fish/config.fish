@@ -10,3 +10,6 @@ starship init fish | source
 set -gx EDITOR nvim
 set -gx EDITOR nvim
 set -gx VISUAL nvim
+
+# opencode
+fish_add_path /home/sakthi/.opencode/bin
