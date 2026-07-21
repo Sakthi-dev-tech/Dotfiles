@@ -11,8 +11,8 @@ hl.config({
     border_size      = 2,
 
     col              = {
-      active_border   = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
-      inactive_border = "rgba(595959aa)",
+      active_border   = "rgba(00000000)",
+      inactive_border = "rgba(333333aa)",
     },
 
     -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -25,18 +25,18 @@ hl.config({
   },
 
   decoration = {
-    rounding         = 10,
-    rounding_power   = 2,
+    rounding         = 20,
+    rounding_power   = 6.0,
 
     -- Change transparency of focused and unfocused windows
     active_opacity   = 1.0,
-    inactive_opacity = 1.0,
+    inactive_opacity = 0.65,
 
     shadow           = {
       enabled      = true,
-      range        = 4,
-      render_power = 3,
-      color        = 0xee1a1a1a,
+      range        = 45,
+      render_power = 4,
+      color        = "rgba(000000cc)",
     },
 
     blur             = {
@@ -101,7 +101,7 @@ hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" 
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
   dwindle = {
-    preserve_split = true,     -- You probably want this
+    preserve_split = true, -- You probably want this
   },
 })
 
@@ -117,9 +117,9 @@ hl.config({
   scrolling = {
     fullscreen_on_one_column = true,
 
-    column_width = 0.9, -- Adjust width of a column
+    column_width = 0.9,   -- Adjust width of a column
     focus_fit_method = 0, -- 0 for center focus window 1 fits to screen
-    follow_focus = true -- Automatically centers window when switch focus
+    follow_focus = true   -- Automatically centers window when switch focus
   },
 })
 
@@ -129,7 +129,7 @@ hl.config({
 
 hl.config({
   misc = {
-    force_default_wallpaper = -1,        -- Set to 0 or 1 to disable the anime mascot wallpapers
-    disable_hyprland_logo   = false,     -- If true disables the random hyprland logo / anime girl background. :(
+    force_default_wallpaper = 0,    -- Set to 0 or 1 to disable the anime mascot wallpapers
+    disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
   },
 })
