@@ -117,7 +117,9 @@ hl.config({
   scrolling = {
     fullscreen_on_one_column = true,
 
-    column_width = 0.8,
+    column_width = 0.9, -- Adjust width of a column
+    focus_fit_method = 0, -- 0 for center focus window 1 fits to screen
+    follow_focus = true -- Automatically centers window when switch focus
   },
 })
 
