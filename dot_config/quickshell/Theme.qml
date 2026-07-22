@@ -4,6 +4,7 @@ import QtQuick
 QtObject {
   // General
   readonly property color background: "#1e1e2e"
+  readonly property color onBackgroundText: "#f5e0dc"
   readonly property color white: "#f5e0dc"
 
   // Workspace

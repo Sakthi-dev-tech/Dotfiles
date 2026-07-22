@@ -15,5 +15,11 @@ QtObject {
   readonly property int widgetWidthPadding: 25
   readonly property int widgetHeightPadding: 10
   readonly property int widgetTextPixelSize: 14
+
+  // Notch
+  readonly property int notchWidthPadding: 45
+  readonly property int notchHeightPadding: 15
+
+  readonly property int notchAnimationDuration: 320
 }
 
