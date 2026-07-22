@@ -7,7 +7,9 @@ import "ControlCenterComponents"
 Item {
     id: controlCenterUI
     required property bool shouldRender
+
     anchors.fill: parent
+    implicitHeight: mainLayout.implicitHeight
 
     // Fade in only when toggled
     opacity: shouldRender ? 1 : 0
@@ -21,7 +23,9 @@ Item {
     }
 
     ColumnLayout {
-        spacing: 10
+        id: mainLayout
+        spacing: 15
+
         anchors {
             top: parent.top
             topMargin: 10
@@ -43,6 +47,10 @@ Item {
                 bold: true
                 pixelSize: 20
             }
+        }
+
+        Item {
+          implicitHeight: 10
         }
 
         GridLayout {

@@ -18,6 +18,7 @@ Rectangle {
     }
 
     color: Theme.background
+
     implicitWidth: {
         if (root.showVolumeSlider) {
             return 360;
@@ -29,15 +30,17 @@ Rectangle {
 
         return clock.width + Constants.notchWidthPadding;
     }
+
     implicitHeight: {
          if (root.isControlCenterOpen) {
-            return 700;
+            return controlCenter.implicitHeight + 30;
         } else if (!root.showVolumeSlider && expanded) {
             return 75;
         }
 
         return clock.height + Constants.notchHeightPadding;
     }
+
     radius: expanded || root.isControlCenterOpen ? 20 : 50
 
     function clearOtherFlags() {
