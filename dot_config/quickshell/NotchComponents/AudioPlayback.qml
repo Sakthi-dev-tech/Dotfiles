@@ -34,7 +34,7 @@ RowLayout {
       radius: 10
 
         Image {
-            id: trackTitle
+            id: trackImage
             source: root.trackArtUrl || "https://i.pinimg.com/736x/7f/20/15/7f20156d90bbfa2b7265403413ae0bb6.jpg"
             asynchronous: true
 

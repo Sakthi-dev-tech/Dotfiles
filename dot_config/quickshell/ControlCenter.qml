@@ -52,5 +52,7 @@ Item {
 
             BluetoothQuickSetting {}
         }
+
+        MusicPlayer {}
     }
 }
