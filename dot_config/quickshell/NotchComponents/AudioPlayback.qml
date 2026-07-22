@@ -10,6 +10,7 @@ RowLayout {
     id: root
 
     spacing: 10
+
     anchors {
       verticalCenter: parent.verticalCenter
 
