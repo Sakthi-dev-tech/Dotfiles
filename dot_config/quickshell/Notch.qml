@@ -1,37 +1,59 @@
 import Quickshell
 import Quickshell.Services.Pipewire
+import Quickshell.Io
 import QtQuick
 
 import "NotchComponents"
 
 Rectangle {
     id: root
+
+    property bool isControlCenterOpen: false
+
     readonly property bool expanded: {
-        if (root.showVolumeSlider)
+        if (root.showVolumeSlider || root.isControlCenterOpen)
             return false;
 
         return mouseArea.containsMouse;
     }
+
     color: Theme.background
     implicitWidth: {
-        if (root.showVolumeSlider)
+        if (root.showVolumeSlider) {
             return 360;
-
-        if (expanded)
+        } else if (root.isControlCenterOpen) {
             return 550;
+        } else if (expanded) {
+            return 550;
+        }
 
         return clock.width + Constants.notchWidthPadding;
     }
     implicitHeight: {
-        if (!root.showVolumeSlider && expanded)
+         if (root.isControlCenterOpen) {
+            return 700;
+        } else if (!root.showVolumeSlider && expanded) {
             return 75;
+        }
 
         return clock.height + Constants.notchHeightPadding;
     }
-    radius: expanded ? 20 : 50
+    radius: expanded || root.isControlCenterOpen ? 20 : 50
 
     function clearOtherFlags() {
         root.showVolumeSlider = false;
+    }
+
+    IpcHandler {
+        target: "notch"
+
+        function toggle(): void {
+            root.isControlCenterOpen = !root.isControlCenterOpen;
+
+            if (root.isControlCenterOpen) {
+                root.clearOtherFlags();
+            }
+        }
     }
 
     AudioPlayback {
@@ -77,12 +99,23 @@ Rectangle {
         ]
     }
 
+    /*
+     * ==========================================================
+     * SAMPLE CONTROL CENTER UI (KEYBIND STATE)
+     * ==========================================================
+     */
+
+    ControlCenter {
+        id: controlCenter
+        shouldRender: root.isControlCenterOpen
+    }
+
     Clock {
         id: clock
 
         expanded: root.expanded
         opacity: {
-            if (root.showVolumeSlider)
+            if (root.showVolumeSlider || root.isControlCenterOpen)
                 return 0;
 
             return 1;
@@ -92,7 +125,7 @@ Rectangle {
 
         Behavior on opacity {
             NumberAnimation {
-                duration: Constants.notchAnimationDuration
+                duration: root.isControlCenterOpen ? 0 : Constants.notchAnimationDuration
                 easing.type: Easing.OutCubic
             }
         }
@@ -188,5 +221,6 @@ Rectangle {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: true
+        acceptedButtons: Qt.NoButton
     }
 }

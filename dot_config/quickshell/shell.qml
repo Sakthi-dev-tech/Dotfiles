@@ -8,7 +8,7 @@ PanelWindow {
         right: true
     }
 
-    implicitHeight: 300 // create rendering surface of this height
+    implicitHeight: 800 // create rendering surface of this height
     exclusiveZone: 35 // bar reserves this height from the top
     color: "transparent"
     mask: Region {
