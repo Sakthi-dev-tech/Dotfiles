@@ -12,3 +12,4 @@ brightnessctl
 # FONTS
 JetBrainsMono Nerd Font
 SF Pro Display
+Monofur Nerd Font Propo

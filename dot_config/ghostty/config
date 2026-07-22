@@ -1,7 +1,6 @@
 theme = Catppuccin Mocha
 
-font-family = "DaddyTimeMono Nerd Font"
-font-size = 11
+font-family = "Monofur Nerd Font Propo"
+font-size = 10
 
 background-opacity = 0.92
-
