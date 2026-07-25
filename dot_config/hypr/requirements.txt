@@ -5,3 +5,7 @@ waybar
 swaync
 wl-clipboard
 cliphist
+
+FONTS
+Daddytime Mono Nerd Font
+Monofor Nerd Font

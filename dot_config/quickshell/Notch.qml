@@ -1,5 +1,6 @@
 import Quickshell
 import Quickshell.Services.Pipewire
+import Quickshell.Services.Notifications
 import Quickshell.Io
 import QtQuick
 
@@ -219,6 +220,13 @@ Rectangle {
                 hideVolumeSlider.restart();
         }
     }
+
+    
+    /*
+     * ==========================================================
+     * NOTIFICATION LOGIC
+     * ==========================================================
+     */
 
     MouseArea {
         id: mouseArea
