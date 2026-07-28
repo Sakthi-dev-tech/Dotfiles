@@ -31,7 +31,7 @@ Item {
 
         Behavior on width {
             NumberAnimation {
-                duration: sliderMouse.pressed ? 0 : 200
+                duration: sliderMouse.pressed ? 0 : 100
                 easing.type: Easing.OutCubic
             }
         }
