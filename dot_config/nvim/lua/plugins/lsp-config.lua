@@ -8,17 +8,18 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-      -- Typescript LSP
-      vim.lsp.config("ts_ls", {
-        capabilities = capabilities,
-      })
-      vim.lsp.enable("ts_ls")
+      local servers = {
+        "html",
+        "cssls",
+        "pyright",
+        "tsgo",
+        "rust_analyzer",
+        "qmlls"
+      }
 
       vim.lsp.config("rust_analyzer", {
         capabilities = capabilities
       })
-      vim.lsp.enable("rust_analyzer")
 
       vim.lsp.config("qmlls", {
         cmd = { 'qmlls6' }, -- Change to 'qmlls6' if using a specific Qt6 binary
@@ -26,7 +27,8 @@ return {
         root_markers = { '.git', 'qmldir' },
         single_file_support = true,
       })
-      vim.lsp.enable("qmlls")
+
+      vim.lsp.enable(servers)
 
       vim.diagnostic.config({
         virtual_text = true,
@@ -98,7 +100,14 @@ return {
       "neovim/nvim-lspconfig",
     },
     opts = {
-      ensure_installed = { "lua_ls", "pyright", "ts_ls", "rust_analyzer", "qmlls" },
+      ensure_installed = {
+        "html",
+        "cssls",
+        "pyright",
+        "tsgo",
+        "rust_analyzer",
+        "qmlls"
+      },
       automatic_install = true,
       automatic_enable = true,
     },
