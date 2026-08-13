@@ -14,6 +14,7 @@ return {
         "pyright",
         "tsgo",
         "rust_analyzer",
+        "clangd",
         "qmlls"
       }
 
@@ -106,6 +107,7 @@ return {
         "pyright",
         "tsgo",
         "rust_analyzer",
+        "clangd",
         "qmlls"
       },
       automatic_install = true,
