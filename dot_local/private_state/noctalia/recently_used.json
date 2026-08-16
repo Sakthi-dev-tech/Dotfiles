@@ -1,12 +1,15 @@
 {
   "Applications": [
+    "/usr/share/applications/obsidian.desktop",
     "/usr/share/applications/com.mitchellh.ghostty.desktop",
     "/usr/share/applications/dev.noctalia.Noctalia.desktop",
     "/usr/share/applications/gimp.desktop",
     "/usr/share/applications/btop.desktop"
   ],
   "Wallpaper": [
+    "/home/sakthi/Pictures/Wallpapers/moon.png",
     "/home/sakthi/Pictures/Wallpapers/dominik-mayer-12.jpg",
+    "/home/sakthi/Pictures/Wallpapers/dominik-mayer-24.jpg",
     "/home/sakthi/Pictures/Wallpapers/radha-krishna.jpg",
     "/home/sakthi/Pictures/Wallpapers/krishna.jpg",
     "/home/sakthi/Pictures/Wallpapers/krishna.png"

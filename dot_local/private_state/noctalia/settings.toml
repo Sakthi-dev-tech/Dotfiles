@@ -99,22 +99,23 @@ font_family = "Monofur Nerd Font"
 
 [theme]
 builtin = "Catppuccin"
+mode = "dark"
 source = "wallpaper"
-wallpaper_scheme = "m3-tonal-spot"
+wallpaper_scheme = "faithful"
 
     [theme.templates]
     builtin_ids = [ "btop", "ghostty" ]
-    community_ids = [ "zen-browser", "obsidian" ]
+    community_ids = [ "opencode", "zen-browser", "neovim", "vscode", "fuzzel", "papirus-icons" ]
 
 [wallpaper]
 directory = "/home/sakthi/Pictures/Wallpapers"
 fill_mode = "fit"
 
     [wallpaper.default]
-    path = "/home/sakthi/Pictures/Wallpapers/dominik-mayer-12.jpg"
+    path = "/home/sakthi/Pictures/Wallpapers/moon.png"
 
     [wallpaper.last]
-    path = "/home/sakthi/Pictures/Wallpapers/dominik-mayer-12.jpg"
+    path = "/home/sakthi/Pictures/Wallpapers/moon.png"
 
     [wallpaper.monitors.HDMI-A-2]
-    path = "/home/sakthi/Pictures/Wallpapers/dominik-mayer-12.jpg"
+    path = "/home/sakthi/Pictures/Wallpapers/moon.png"
