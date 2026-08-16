@@ -46,10 +46,10 @@ widget_order = []
     [desktop_widgets.widget]
 
 [keybinds]
-down = [ "Down", "Alt+j", "Alt+n" ]
+down = [ "Down", "Alt+j", "Ctrl+n" ]
 left = [ "Left", "Alt+h" ]
 right = [ "Right", "Alt+l" ]
-up = [ "Up", "Alt+k", "Alt+p" ]
+up = [ "Up", "Alt+k", "Ctrl+p" ]
 
 [lockscreen_widgets]
 enabled = false
@@ -89,6 +89,14 @@ widget_order = [ "lockscreen-login-box@HDMI-A-2" ]
 [osd.kinds]
 media = false
 
+[plugin_settings."noctalia/mpvpaper"]
+picker_placement = "floating"
+picker_position = "bottom_center"
+video_directory = "/home/sakthi/Pictures/Wallpapers"
+
+[plugins]
+enabled = [ "noctalia/mpvpaper" ]
+
 [shell]
 font_family = "Monofur Nerd Font"
 
@@ -113,7 +121,7 @@ font_family = "Monofur Nerd Font"
 builtin = "Catppuccin"
 mode = "dark"
 source = "wallpaper"
-wallpaper_scheme = "faithful"
+wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
     builtin_ids = [ "btop", "ghostty" ]
@@ -124,13 +132,13 @@ directory = "/home/sakthi/Pictures/Wallpapers"
 fill_mode = "fit"
 
     [wallpaper.default]
-    path = "/home/sakthi/Pictures/Wallpapers/moon.png"
+    path = "/home/sakthi/Pictures/Wallpapers/retro2_live.gif"
 
     [wallpaper.last]
-    path = "/home/sakthi/Pictures/Wallpapers/moon.png"
+    path = "/home/sakthi/Pictures/Wallpapers/retro2_live.gif"
 
     [wallpaper.monitors.HDMI-A-2]
-    path = "/home/sakthi/Pictures/Wallpapers/moon.png"
+    path = "/home/sakthi/Pictures/Wallpapers/retro2_live.gif"
 
 [widget.control-center]
 custom_image_colorize = true

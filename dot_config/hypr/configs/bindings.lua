@@ -70,6 +70,9 @@ hl.bind("SUPER + S", hl.dsp.exec_cmd("hyprshot -m region"))
 -- Hyprlock
 hl.bind("SUPER + M", hl.dsp.exec_cmd("hyprlock"))
 
+-- Noctalia Video Wallpaper Picker
+hl.bind("SUPER + W", hl.dsp.exec_cmd("noctalia msg panel-toggle noctalia/mpvpaper:picker"))
+
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
