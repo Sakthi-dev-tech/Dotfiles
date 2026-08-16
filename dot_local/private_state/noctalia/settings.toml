@@ -1,13 +1,23 @@
 config_version = 12
 
 [bar.default]
-center = [ "control-center", "clock", "audio_visualizer" ]
-end = [ "media", "notifications", "clipboard", "network", "bluetooth", "volume", "brightness", "battery", "session" ]
+center = [ "control-center", "clock" ]
+end = [ "group:g1", "notifications", "clipboard", "network", "bluetooth", "volume", "brightness", "battery", "session" ]
 font_family = "Monofur Nerd Font"
 position = "bottom"
 start = [ "workspaces", "launcher", "wallpaper", "cpu" ]
 thickness = 40
 widget_spacing = 7
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    enabled = true
+    fill = "surface_variant"
+    id = "g1"
+    members = [ "media", "audio_visualizer" ]
+    opacity = 1.0
+    padding = 6.0
 
 [[control_center.shortcuts]]
 type = "wifi"
@@ -126,7 +136,7 @@ fill_mode = "fit"
 custom_image_colorize = true
 
 [widget.media]
-hide_album_art = true
+album_art_only = true
 hide_artist = true
 max_length = 197
 title_scroll = "on_hover"
