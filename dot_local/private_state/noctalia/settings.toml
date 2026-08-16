@@ -1,11 +1,13 @@
 config_version = 12
 
 [bar.default]
-center = [ "clock", "audio_visualizer" ]
+center = [ "control-center", "clock", "audio_visualizer" ]
+end = [ "media", "notifications", "clipboard", "network", "bluetooth", "volume", "brightness", "battery", "session" ]
 font_family = "Monofur Nerd Font"
 position = "bottom"
 start = [ "workspaces", "launcher", "wallpaper", "cpu" ]
 thickness = 40
+widget_spacing = 7
 
 [[control_center.shortcuts]]
 type = "wifi"
@@ -119,3 +121,16 @@ fill_mode = "fit"
 
     [wallpaper.monitors.HDMI-A-2]
     path = "/home/sakthi/Pictures/Wallpapers/moon.png"
+
+[widget.control-center]
+custom_image_colorize = true
+
+[widget.media]
+hide_album_art = true
+hide_artist = true
+max_length = 197
+title_scroll = "on_hover"
+
+[widget.workspaces]
+focused_output_only = true
+font_weight = 700
