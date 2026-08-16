@@ -7,6 +7,38 @@ position = "bottom"
 start = [ "workspaces", "launcher", "wallpaper", "cpu" ]
 thickness = 40
 
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[keybinds]
+down = [ "Down", "Alt+j", "Alt+n" ]
+left = [ "Left", "Alt+h" ]
+right = [ "Right", "Alt+l" ]
+up = [ "Up", "Alt+k", "Alt+p" ]
+
 [lockscreen_widgets]
 enabled = false
 schema_version = 2
@@ -48,7 +80,21 @@ media = false
 [shell]
 font_family = "Monofur Nerd Font"
 
+    [shell.launcher.providers.emoji]
+    global = true
+
+    [shell.launcher.providers.session]
+    global = false
+
+    [shell.launcher.providers.wallpaper]
+    global = true
+    prefix = ""
+
+    [shell.launcher.providers.windows]
+    global = false
+
     [shell.panel]
+    launcher_position = "bottom_center"
     transparency_mode = "glass"
 
 [theme]
@@ -56,12 +102,19 @@ builtin = "Catppuccin"
 source = "wallpaper"
 wallpaper_scheme = "m3-tonal-spot"
 
+    [theme.templates]
+    builtin_ids = [ "btop", "ghostty" ]
+    community_ids = [ "zen-browser", "obsidian" ]
+
 [wallpaper]
 directory = "/home/sakthi/Pictures/Wallpapers"
 fill_mode = "fit"
 
     [wallpaper.default]
-    path = "/home/sakthi/Pictures/Wallpapers/dominik-mayer-24.jpg"
+    path = "/home/sakthi/Pictures/Wallpapers/dominik-mayer-12.jpg"
 
     [wallpaper.last]
-    path = "/home/sakthi/Pictures/Wallpapers/dominik-mayer-24.jpg"
+    path = "/home/sakthi/Pictures/Wallpapers/dominik-mayer-12.jpg"
+
+    [wallpaper.monitors.HDMI-A-2]
+    path = "/home/sakthi/Pictures/Wallpapers/dominik-mayer-12.jpg"

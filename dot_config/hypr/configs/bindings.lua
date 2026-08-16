@@ -53,8 +53,8 @@ hl.bind(mainMod .. " + CTRL + j",
 )
 
 -- Open file manager
-hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("lua ~/.config/hypr/scripts/rofi-apps.lua"), {
-  description = "Open Rofi app launcher"
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"), {
+  description = "Toggle Noctalia app launcher"
 })
 
 -- Clipboard
