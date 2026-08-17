@@ -13,6 +13,7 @@ return {
         "cssls",
         "pyright",
         "tsgo",
+        "jdtls",
         "rust_analyzer",
         "clangd",
         "qmlls"
@@ -106,6 +107,7 @@ return {
         "cssls",
         "pyright",
         "tsgo",
+        "jdtls",
         "rust_analyzer",
         "clangd",
         "qmlls"
