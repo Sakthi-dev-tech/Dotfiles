@@ -58,7 +58,7 @@ hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"), 
 })
 
 -- Clipboard
-hl.bind("SUPER + V", hl.dsp.exec_cmd("sh -c 'cliphist list | wofi --dmenu | cliphist decode | wl-copy'"))
+hl.bind("SUPER + V", hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"))
 
 -- Screenshot
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
