@@ -3,7 +3,12 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 # overwrite greeting
 # potentially disabling fastfetch
 #function fish_greeting
-#    # smth smth
+
+# aliases
+alias vi=nvim
+
+# anaconda
+source ~/anaconda3/etc/fish/conf.d/conda.fish
 
 zoxide init fish | source
 starship init fish | source
