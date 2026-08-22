@@ -68,7 +68,7 @@ hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m window"))
 hl.bind("SUPER + S", hl.dsp.exec_cmd("hyprshot -m region"))
 
 -- Hyprlock
-hl.bind("SUPER + M", hl.dsp.exec_cmd("hyprlock"))
+hl.bind("SUPER + M", hl.dsp.exec_cmd("noctalia msg session lock"))
 
 -- Noctalia Video Wallpaper Picker
 hl.bind("SUPER + W", hl.dsp.exec_cmd("noctalia msg panel-toggle noctalia/mpvpaper:picker"))
