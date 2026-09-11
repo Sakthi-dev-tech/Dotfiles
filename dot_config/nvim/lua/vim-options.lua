@@ -6,6 +6,20 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+<<<<<<< HEAD
+=======
+
+-- Keep indentation consistent even when a filetype plugin changes its defaults.
+vim.api.nvim_create_autocmd({ "FileType", "BufWinEnter" }, {
+    group = vim.api.nvim_create_augroup("FourSpaceIndent", { clear = true }),
+    callback = function()
+        vim.bo.expandtab = true
+        vim.bo.tabstop = 4
+        vim.bo.softtabstop = 4
+        vim.bo.shiftwidth = 4
+    end,
+})
+>>>>>>> 2be039b (Add mini.ai nvim)
 vim.opt.number = true
 
 -- Line number options
