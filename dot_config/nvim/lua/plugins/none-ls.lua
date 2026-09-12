@@ -10,7 +10,6 @@ return {
 
     null_ls.setup({
       sources = {
-<<<<<<< HEAD
         null_ls.builtins.formatting.stylua.with({
           extra_args = { "--indent-type", "Spaces", "--indent-width", "4" },
         }),
@@ -19,7 +18,6 @@ return {
         }),
         null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.isort,
-=======
         formatting.stylua.with({
           extra_args = { "--indent-type", "Spaces", "--indent-width", "4" },
         }),
@@ -35,7 +33,6 @@ return {
             "--style={BasedOnStyle: LLVM, IndentWidth: 4, TabWidth: 4, UseTab: Never}",
           },
         }),
->>>>>>> 2be039b (Add mini.ai nvim)
 
         require("none-ls.diagnostics.eslint"),
       },
