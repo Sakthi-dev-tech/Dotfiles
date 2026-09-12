@@ -29,6 +29,10 @@ vim.opt.termguicolors = true
 vim.opt.clipboard = "unnamedplus"
 vim.o.laststatus = 3
 
+-- Blink handles automatic inline completion.
+vim.o.autocomplete = false
+vim.opt.completeopt = "menu,menuone,noselect,popup"
+
 -- Custom keymaps
 vim.keymap.set({ "i", "s" }, "jj", "<Esc>")
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlights' })

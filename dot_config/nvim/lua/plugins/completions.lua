@@ -7,6 +7,7 @@ return {
     config = function()
       local cmp = require("cmp")
       cmp.setup.cmdline(":", {
+        enabled = true,
         mapping = cmp.mapping.preset.cmdline(),
         sources = cmp.config.sources({
           { name = "path" },
@@ -34,39 +35,32 @@ return {
       local cmp = require("cmp")
       require("luasnip.loaders.from_vscode").lazy_load()
 
-      cmp.setup({
-        snippet = {
-          expand = function(args)
-            require("luasnip").lsp_expand(args.body)
-          end,
-        },
-        window = {
-          completion = cmp.config.window.bordered({
-            border = "rounded",
-            winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None",
-          }),
-          documentation = cmp.config.window.bordered({
-            border = "rounded",
-            winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None",
-          }),
-        },
-        mapping = cmp.mapping.preset.insert({
-          ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-          ["<C-f>"] = cmp.mapping.scroll_docs(4),
-          ["<C-Space>"] = cmp.mapping.complete(),
-          ["<C-e>"] = cmp.mapping.abort(),
-          ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-        }),
-        sources = cmp.config.sources({
-          { name = "nvim_lsp" },
-          -- { name = 'vsnip' }, -- For vsnip users.
-          { name = "luasnip" }, -- For luasnip users.
-          -- { name = 'ultisnips' }, -- For ultisnips users.
-          -- { name = 'snippy' }, -- For snippy users.
-        }, {
-          { name = "buffer" },
-        }),
-      })
+      -- Keep nvim-cmp for command-line completion only.
+      cmp.setup({ enabled = false })
     end,
+  },
+  {
+    "saghen/blink.cmp",
+    version = "1.*",
+    dependencies = { "L3MON4D3/LuaSnip" },
+    opts = {
+      keymap = {
+        preset = "default",
+        ["<Tab>"] = { "accept", "snippet_forward", "fallback" },
+        ["<S-Tab>"] = { "snippet_backward", "fallback" },
+        ["<C-n>"] = { "select_next", "fallback" },
+        ["<C-p>"] = { "select_prev", "fallback" },
+      },
+      completion = {
+        list = { selection = { preselect = true, auto_insert = false } },
+        menu = { auto_show = false },
+        documentation = { auto_show = false },
+        ghost_text = { enabled = true, show_with_menu = false },
+      },
+      snippets = { preset = "luasnip" },
+      sources = { default = { "lsp", "path", "snippets", "buffer" } },
+      fuzzy = { implementation = "lua" },
+      cmdline = { enabled = false },
+    },
   },
 }
