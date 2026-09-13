@@ -53,8 +53,18 @@ return {
       },
       completion = {
         list = { selection = { preselect = true, auto_insert = false } },
-        menu = { auto_show = false },
-        documentation = { auto_show = false },
+        menu = {
+          auto_show = true,
+          border = "rounded",
+          winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None",
+        },
+        documentation = {
+          auto_show = false,
+          window = {
+            border = "rounded",
+            winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,EndOfBuffer:CmpPmenu",
+          },
+        },
         ghost_text = { enabled = true, show_with_menu = false },
       },
       snippets = { preset = "luasnip" },
