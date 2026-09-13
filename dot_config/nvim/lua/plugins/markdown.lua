@@ -11,6 +11,10 @@ return {
                     name = "Obsidian Vault",
                     path = "/home/sakthi/Documents/Obsidian Vault",
                 },
+                {
+                    name = "Obsidian Vault",
+                    path = "/home/sakthi/Obsidian Vault",
+                },
             },
             picker = {
                 name = "telescope.nvim",
