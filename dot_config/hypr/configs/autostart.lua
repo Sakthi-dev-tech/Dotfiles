@@ -14,7 +14,7 @@
 -- end)
 
 hl.on("hyprland.start", function()
-  hl.exec_cmd("chezmoi update --no-tty")
+  hl.exec_cmd("chezmoi update --no-tty --force")
   hl.exec_cmd("noctalia")
   hl.exec_cmd("wl-paste --type text --watch cliphist store")
   hl.exec_cmd("wl-paste --type image --watch cliphist store")
