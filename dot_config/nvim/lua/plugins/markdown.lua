@@ -6,14 +6,10 @@ return {
         ---@type obsidian.config
         opts = {
             legacy_commands = false,
-            workspaces = {
+           workspaces = {
                 {
                     name = "Obsidian Vault",
                     path = "/home/sakthi/Documents/Obsidian Vault",
-                },
-                {
-                    name = "Obsidian Vault",
-                    path = "/home/sakthi/Obsidian Vault",
                 },
             },
             picker = {
@@ -29,5 +25,20 @@ return {
         ---@module 'render-markdown'
         ---@type render.md.UserConfig
         opts = {},
+    },
+    {
+        "HakonHarnes/img-clip.nvim",
+        event = "VeryLazy",
+        opts = {
+            default = {
+                dir_path = "./Attachments",
+
+                use_absolute_path = false,
+            }
+        },
+        keys = {
+            -- suggested keymap
+            { "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
+        },
     }
 }
