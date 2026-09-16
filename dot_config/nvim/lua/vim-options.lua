@@ -27,7 +27,7 @@ vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#E0AF68", bold = true }) -- Set c
 
 vim.opt.termguicolors = true
 vim.opt.clipboard = "unnamedplus"
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "yes:2"
 vim.o.laststatus = 3
 
 -- Blink handles automatic inline completion.
