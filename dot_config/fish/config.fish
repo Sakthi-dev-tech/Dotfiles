@@ -7,9 +7,6 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 # aliases
 alias vi=nvim
 
-# anaconda
-source ~/anaconda3/etc/fish/conf.d/conda.fish
-
 zoxide init fish | source
 starship init fish | source
 set -gx EDITOR nvim
