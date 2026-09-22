@@ -7,6 +7,14 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 # aliases
 alias vi=nvim
 
+# Initialize Conda and activate its base environment on startup.
+if test -x "$HOME/miniconda3/bin/conda"
+    "$HOME/miniconda3/bin/conda" shell.fish hook | source
+    if not set -q CONDA_PREFIX
+        conda activate base
+    end
+end
+
 zoxide init fish | source
 starship init fish | source
 set -gx EDITOR nvim
