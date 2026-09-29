@@ -16,6 +16,9 @@ return {
             templates = {
                 folder = "999 Templates",
             },
+            attachments = {
+                folder = "Attachments",
+            },
             picker = {
                 name = "telescope.nvim",
             },

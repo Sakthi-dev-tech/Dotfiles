@@ -24,6 +24,15 @@ return {
 
             image = {
                 enabled = true,
+                resolve = function(path, src)
+                    local api = require("obsidian.api")
+                    if api.path_is_note(path) and not src:find("/", 1, true) then
+                        local attachment = api.resolve_attachment_path(src)
+                        if vim.fn.filereadable(attachment) == 1 then
+                            return attachment
+                        end
+                    end
+                end,
                 doc = {
                     -- This ensures images render inside markdown files automatically
                     inline = true,
