@@ -17,9 +17,9 @@ return {
                     signcolumn = "yes:2"
                 },
                 keymaps = {
-                    ["h"] = { "actions.parent", mode = "n" },
+                    ["<BS>"] = { "actions.parent", mode = "n" },
                     ["."] = { "actions.toggle_hidden", mode = "n" },
-                    ["l"] = { "actions.select" }
+                    ["<CR>"] = { "actions.select" }
                 }
             })
             vim.keymap.set("n", "<leader>e", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
