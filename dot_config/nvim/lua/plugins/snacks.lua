@@ -24,6 +24,9 @@ return {
 
             image = {
                 enabled = true,
+                math = {
+                    enabled = false,
+                },
                 resolve = function(path, src)
                     local api = require("obsidian.api")
                     if api.path_is_note(path) and not src:find("/", 1, true) then
