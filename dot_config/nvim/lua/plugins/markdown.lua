@@ -13,12 +13,14 @@ return {
                     path = "/home/sakthi/Documents/Obsidian Vault",
                 },
             },
+            templates = {
+                folder = "999 Templates",
+            },
             picker = {
                 name = "telescope.nvim",
             },
         },
         keys = {
-            -- suggested keymap
             { "<leader>p", "<cmd>Obsidian paste_img<cr>", desc = "Paste image from system clipboard" },
         },
     },
