@@ -661,4 +661,4 @@ binds {
 }
 
 spawn-at-startup "noctalia"
-spawn-at-startup "chezmoi update --no-tty --force"
+spawn-at-startup "chezmoi" "update" "--no-tty" "--force"
