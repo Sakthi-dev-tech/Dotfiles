@@ -16,6 +16,10 @@ return {
                 name = "telescope.nvim",
             },
         },
+        keys = {
+            -- suggested keymap
+            { "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
+        },
     },
     {
         'MeanderingProgrammer/render-markdown.nvim',
@@ -26,19 +30,4 @@ return {
         ---@type render.md.UserConfig
         opts = {},
     },
-    {
-        "HakonHarnes/img-clip.nvim",
-        event = "VeryLazy",
-        opts = {
-            default = {
-                dir_path = "./Attachments",
-
-                use_absolute_path = false,
-            }
-        },
-        keys = {
-            -- suggested keymap
-            { "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
-        },
-    }
 }
