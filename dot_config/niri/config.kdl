@@ -662,3 +662,4 @@ binds {
 
 spawn-at-startup "noctalia"
 spawn-at-startup "chezmoi" "update" "--no-tty" "--force"
+spawn-sh-at-startup "mkdir -p ~/GoogleDrive && rclone mount gdrive: ~/GoogleDrive --vfs-cache-mode=writes --daemon"
