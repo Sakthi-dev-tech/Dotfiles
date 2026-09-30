@@ -1,6 +1,7 @@
 return {
     {
         "obsidian-nvim/obsidian.nvim",
+        lazy = false,
         version = "*", -- use latest release, remove to use latest commit
         ---@module 'obsidian'
         ---@type obsidian.config
