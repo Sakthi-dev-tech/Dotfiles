@@ -362,7 +362,7 @@ window-rule {
 
 window-rule {
     match is-active=false
-    opacity 0.9
+    opacity 0.98
 }
 
 // Persistent workspace names keep number shortcuts stable even when empty.
