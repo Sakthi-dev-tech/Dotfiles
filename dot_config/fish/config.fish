@@ -24,7 +24,9 @@ set -gx VISUAL nvim
 # opencode
 fish_add_path /home/sakthi/.opencode/bin
 
+# anaconda3
+fish_add_path ~/anaconda3/bin
+
 # Bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
