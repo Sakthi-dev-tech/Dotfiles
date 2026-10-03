@@ -35,6 +35,7 @@ return {
       { "<leader>c", group = "Code" },
       { "<leader>f", group = "Format" },
       { "<leader>b", group = "Buffer" },
+      { "<leader>d", group = "Debugger" },
       { "<leader>o", group = "Opencode"}
     })
   end,
