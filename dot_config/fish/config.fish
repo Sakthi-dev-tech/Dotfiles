@@ -15,6 +15,13 @@ if test -x "$HOME/miniconda3/bin/conda"
     end
 end
 
+if test -x "$HOME/anaconda3/bin/conda"
+    "$HOME/anaconda3/bin/conda" shell.fish hook | source
+    if not set -q CONDA_PREFIX
+        conda activate base
+    end
+end
+
 zoxide init fish | source
 starship init fish | source
 set -gx EDITOR nvim
@@ -23,9 +30,6 @@ set -gx VISUAL nvim
 
 # opencode
 fish_add_path /home/sakthi/.opencode/bin
-
-# anaconda3
-fish_add_path ~/anaconda3/bin
 
 # Bun
 export BUN_INSTALL="$HOME/.bun"
