@@ -180,4 +180,5 @@ zoxide_support = true
 #   conf = "nvim"
 [open_with]
 png = "zathura"
-pdf = "zathura"
+editor = "nvim"
+conf = "nvim"
