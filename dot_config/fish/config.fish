@@ -31,6 +31,9 @@ set -gx VISUAL nvim
 # opencode
 fish_add_path /home/sakthi/.opencode/bin
 
+# Zig Language
+fish_add_path ~/.local/opt/zig-x86_64-linux-0.17.0/
+
 # Bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
