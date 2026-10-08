@@ -36,11 +36,11 @@ vim.o.autocomplete = false
 vim.opt.completeopt = "menu,menuone,noselect,popup"
 
 -- Custom keymaps
-vim.keymap.set({ "i", "s" }, "jj", "<Esc>")
+vim.keymap.set({ "i", "s" }, "jk", "<Esc>")
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlights' })
 -- Move between buffers
 vim.keymap.set('n', '<C-h>', '<C-w>h')
 vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
-vim.keymap.set('t', "jj", [[<C-\><C-n>]], { desc = 'Exit terminal mode' })
+vim.keymap.set('t', "jk", [[<C-\><C-n>]], { desc = 'Exit terminal mode' })
