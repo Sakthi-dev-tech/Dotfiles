@@ -53,6 +53,8 @@ return {
 
     vim.keymap.set("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Goto left buffer" })
     vim.keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>", { desc = "Goto right buffer" })
+    vim.keymap.set("n", "<C-S-H>", "<cmd>BufferLineMovePrev<CR>", { desc = "Move current buffer left" })
+    vim.keymap.set("n", "<C-S-L>", "<cmd>BufferLineMoveNext<CR>", { desc = "Move current buffer right" })
     vim.keymap.set("n", "<leader>bd", function()
       Snacks.bufdelete()
     end, { desc = "Delete buffer" })
