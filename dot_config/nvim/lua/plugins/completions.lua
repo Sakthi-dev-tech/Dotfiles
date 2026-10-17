@@ -1,6 +1,12 @@
 return {
   {
-    "hrsh7th/cmp-nvim-lsp",
+    "folke/lazydev.nvim",
+    ft = "lua",
+    opts = {
+      library = {
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+      },
+    },
   },
   {
     "hrsh7th/cmp-cmdline",
@@ -47,6 +53,7 @@ return {
       keymap = {
         preset = "default",
         ["<CR>"] = { "accept", "fallback" },
+        ["<C-y>"] = { "select_and_accept", "fallback" },
         ["<Tab>"] = { "accept", "snippet_forward", "fallback" },
         ["<S-Tab>"] = { "snippet_backward", "fallback" },
         ["<C-n>"] = { "select_next", "fallback" },
@@ -60,16 +67,29 @@ return {
           winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None",
         },
         documentation = {
-          auto_show = false,
+          auto_show = true,
+          auto_show_delay_ms = 300,
           window = {
             border = "rounded",
             winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,EndOfBuffer:CmpPmenu",
           },
         },
-        ghost_text = { enabled = true, show_with_menu = false },
+        ghost_text = { enabled = true, show_with_menu = true },
       },
       snippets = { preset = "luasnip" },
-      sources = { default = { "lsp", "path", "snippets", "buffer" } },
+      sources = {
+        default = { "lsp", "path", "snippets", "buffer" },
+        per_filetype = {
+          lua = { "lazydev", "lsp", "path", "snippets", "buffer" },
+        },
+        providers = {
+          lazydev = {
+            name = "LazyDev",
+            module = "lazydev.integrations.blink",
+            score_offset = 100,
+          },
+        },
+      },
       fuzzy = { implementation = "lua" },
       cmdline = { enabled = false },
     },

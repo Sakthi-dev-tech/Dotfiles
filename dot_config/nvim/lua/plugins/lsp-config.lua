@@ -6,8 +6,9 @@ return {
 
   {
     "neovim/nvim-lspconfig",
+    dependencies = { "saghen/blink.cmp" },
     config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      local capabilities = require("blink.cmp").get_lsp_capabilities()
       local servers = {
         "html",
         "cssls",
@@ -16,12 +17,13 @@ return {
         "jdtls",
         "rust_analyzer",
         "clangd",
-        "qmlls"
+        "qmlls",
+        "lua_ls",
       }
 
-      vim.lsp.config("rust_analyzer", {
-        capabilities = capabilities
-      })
+      for _, server in ipairs(servers) do
+        vim.lsp.config(server, { capabilities = capabilities })
+      end
 
       vim.lsp.config("qmlls", {
         cmd = { 'qmlls6' }, -- Change to 'qmlls6' if using a specific Qt6 binary
@@ -110,7 +112,8 @@ return {
         "jdtls",
         "rust_analyzer",
         "clangd",
-        "qmlls"
+        "qmlls",
+        "lua_ls",
       },
       automatic_install = true,
       automatic_enable = true,
