@@ -9,3 +9,6 @@ window-padding-balance = true
 
 background-opacity = 0.85
 background-opacity-cells = true
+
+keybind = ctrl+[=move_tab:-1
+keybind = ctrl+]=move_tab:1
