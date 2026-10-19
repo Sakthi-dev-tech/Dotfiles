@@ -1,34 +1,32 @@
 return {
     {
-        'stevearc/oil.nvim',
+        "stevearc/oil.nvim",
         ---@module 'oil'
         ---@type oil.SetupOpts
         opts = {},
         -- Optional dependencies
-        dependencies = {
-            { "nvim-mini/mini.icons", opts = {} },
-        },
+        dependencies = {},
         -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
         -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
         lazy = false,
         config = function()
             require("oil").setup({
                 win_options = {
-                    signcolumn = "yes:2"
+                    signcolumn = "yes:2",
                 },
                 keymaps = {
                     ["<BS>"] = { "actions.parent", mode = "n" },
                     ["."] = { "actions.toggle_hidden", mode = "n" },
-                    ["<CR>"] = { "actions.select" }
-                }
+                    ["<CR>"] = { "actions.select" },
+                },
             })
             vim.keymap.set("n", "<leader>e", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
-        end
+        end,
     },
     {
         "JezerM/oil-lsp-diagnostics.nvim",
         dependencies = { "stevearc/oil.nvim" },
-        opts = {}
+        opts = {},
     },
     {
         "refractalize/oil-git-status.nvim",
