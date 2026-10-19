@@ -7,7 +7,6 @@ return {
             lualine = true,
             bufferline = true,
             telescope = true,
-            fzf_lua = true
         },
     },
 }
