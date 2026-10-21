@@ -36,7 +36,7 @@ return {
       { "<leader>f", group = "Format" },
       { "<leader>b", group = "Buffer" },
       { "<leader>d", group = "Debugger" },
-      { "<leader>o", group = "Opencode"}
+      { "<leader>j", group = "Jupyter Notebook"}
     })
   end,
 }
