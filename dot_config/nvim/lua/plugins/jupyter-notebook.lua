@@ -73,6 +73,8 @@ return {
                 evaluate_percent_cell,
                 { silent = true, desc = "Run current code cell" }
             )
+            vim.keymap.set("n", "<leader>jh", ":MoltenHideOutput<CR>", {desc = "Hide Molten Output"})
+            vim.keymap.set("n", "<leader>js", ":MoltenShowOutput<CR>", {desc = "Show Molten Output"})
         end,
     },
 }
