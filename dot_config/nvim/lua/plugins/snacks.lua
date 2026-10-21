@@ -48,7 +48,7 @@ return {
 
         keys = {
             {
-                "<leader>t",
+                "<leader>T",
                 function()
                     Snacks.terminal.toggle()
                 end,
