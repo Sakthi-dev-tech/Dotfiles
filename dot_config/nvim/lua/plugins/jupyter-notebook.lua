@@ -71,7 +71,7 @@ return {
                 "n",
                 "<leader>jc",
                 evaluate_percent_cell,
-                { silent = true, desc = "Run current # %% cell" }
+                { silent = true, desc = "Run current code cell" }
             )
         end,
     },
