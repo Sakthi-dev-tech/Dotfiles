@@ -66,6 +66,7 @@ return {
             vim.g.molten_output_win_max_height = 40
             vim.g.molten_virt_text_output = true
             vim.g.molten_auto_open_output = false
+            vim.g.molten_enter_output_behavior = "open_and_enter"
             vim.g.molten_wrap_output = true
 
             vim.keymap.set("n", "<leader>ji", ":MoltenInit<CR>")
@@ -78,6 +79,8 @@ return {
             )
             vim.keymap.set("n", "<leader>jh", ":MoltenHideOutput<CR>", {desc = "Hide Molten Output"})
             vim.keymap.set("n", "<leader>js", ":MoltenShowOutput<CR>", {desc = "Show Molten Output"})
+            vim.keymap.set("n", "<leader>je", ":noautocmd MoltenEnterOutput<CR>",
+                { silent = true, desc = "Enter Molten output" })
         end,
     },
 }
