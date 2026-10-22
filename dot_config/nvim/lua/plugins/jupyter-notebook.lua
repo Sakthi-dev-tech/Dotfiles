@@ -64,6 +64,9 @@ return {
             -- these are examples, not defaults. Please see the readme
             vim.g.molten_image_provider = "image.nvim"
             vim.g.molten_output_win_max_height = 40
+            vim.g.molten_virt_text_output = true
+            vim.g.molten_auto_open_output = false
+            vim.g.molten_wrap_output = true
 
             vim.keymap.set("n", "<leader>ji", ":MoltenInit<CR>")
             vim.keymap.set("v", "<leader>jv", ":<C-u>MoltenEvaluateVisual<CR>")
