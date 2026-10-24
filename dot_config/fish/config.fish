@@ -6,6 +6,7 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 # aliases
 alias vi=nvim
+alias lg=lazygit
 
 # Initialize Conda and activate its base environment on startup.
 if test -x "$HOME/miniconda3/bin/conda"
