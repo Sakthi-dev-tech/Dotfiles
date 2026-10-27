@@ -54,7 +54,7 @@ return {
         preset = "default",
         ["<CR>"] = { "accept", "fallback" },
         ["<C-y>"] = { "select_and_accept", "fallback" },
-        ["<Tab>"] = { "accept", "snippet_forward", "fallback" },
+        ["<Tab>"] = false, -- Use the spaces-only mapping in vim-options.lua.
         ["<S-Tab>"] = { "snippet_backward", "fallback" },
         ["<C-n>"] = { "select_next", "fallback" },
         ["<C-p>"] = { "select_prev", "fallback" },
