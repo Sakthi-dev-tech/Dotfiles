@@ -595,6 +595,11 @@ binds {
         spawn "sh" "-c" "$HOME/.local/share/quickshell-lockscreen/lock.sh";
     }
 
+    // Press Alt+Space to record; press again to transcribe and paste.
+    Alt+Space repeat=false hotkey-overlay-title="Hex dictation" {
+        spawn "hex" "dictation" "toggle";
+    }
+
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
     Mod+Ctrl+F { expand-column-to-available-width; }
