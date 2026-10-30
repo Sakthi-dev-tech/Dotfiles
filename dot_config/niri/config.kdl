@@ -621,7 +621,7 @@ binds {
 
     // Move the focused window between the floating and the tiling layout.
     Mod+P       { toggle-window-floating; }
-    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    Mod+T { switch-focus-between-floating-and-tiling; }
 
     // Noctalia clipboard and video wallpaper picker.
     Mod+V { spawn "noctalia" "msg" "panel-toggle" "clipboard"; }
