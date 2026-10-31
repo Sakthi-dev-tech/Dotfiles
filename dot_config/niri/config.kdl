@@ -596,7 +596,7 @@ binds {
     }
 
     // Press Alt+Space to record; press again to transcribe and paste.
-    Alt+Space repeat=false hotkey-overlay-title="Hex dictation" {
+    Ctrl+Space repeat=false hotkey-overlay-title="Hex dictation" {
         spawn "hex" "dictation" "toggle";
     }
 
