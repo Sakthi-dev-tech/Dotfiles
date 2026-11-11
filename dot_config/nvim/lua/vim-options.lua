@@ -49,9 +49,3 @@ vim.keymap.set('n', '<C-q>', function()
     vim.api.nvim_buf_clear_namespace(0, mc_ns, 0, -1)
 end, { desc = "Clear all multicursors" })
 vim.keymap.set('t', "\\", [[<C-\><C-n>]], { desc = 'Exit terminal mode' })
-
--- Jump to next paragraph and center
-vim.keymap.set("n", "}", "}zz", { desc = "Go to next paragraph and center screen" })
-
--- Jump to previous paragraph and center
-vim.keymap.set("n", "{", "{zz", { desc = "Go to previous paragraph and center screen" })
