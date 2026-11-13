@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compact Cheatsheets"
+  short_description: "Compact exam sheets with symbol legends and clear examples"
+  default_prompt: "Use $compact-cheatsheets to create or extend my cheatsheet; clarify the scope and exam constraints, then use compact comparisons, symbol legends, and verified examples."
