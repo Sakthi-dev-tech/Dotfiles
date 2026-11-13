@@ -9,8 +9,9 @@ window-padding-balance = true
 
 custom-shader = shaders/ghostty/cursor_tail.glsl
 
-background-opacity = 0.85
+background-opacity = 0.80
 background-opacity-cells = true
+background-blur = true
 
 keybind = ctrl+[=move_tab:-1
 keybind = ctrl+]=move_tab:1
