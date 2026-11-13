@@ -1,3 +1,5 @@
+local max_image_size = 45
+
 return {
     "3rd/image.nvim",
     build = false, -- Use the ImageMagick CLI instead of building the Lua rock.
@@ -20,8 +22,8 @@ return {
         image.setup(opts)
     end,
     opts = {
-        max_width = 160,
-        max_height = 40,
+        max_width = max_image_size,
+        max_height = max_image_size,
         scale_factor = 1.5,
         max_height_window_percentage = math.huge,
         max_width_window_percentage = math.huge,
