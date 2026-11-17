@@ -38,6 +38,33 @@ vim.opt.completeopt = "menu,menuone,noselect,popup"
 -- Custom keymaps
 vim.keymap.set({ "i", "s" }, "jk", "<Esc>")
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlights' })
+vim.keymap.set("n", "<leader>hc", function()
+  local before, after = vim.bo.commentstring:match("^(.-)%%s(.*)$")
+
+  if not before then
+    vim.notify("No comment syntax configured for this filetype", vim.log.levels.WARN)
+    return
+  end
+
+  local row = vim.api.nvim_win_get_cursor(0)[1]
+  local indent = vim.api.nvim_get_current_line():match("^%s*")
+  local border = string.rep("=", 40)
+
+  local function comment(text)
+    return indent .. before .. text .. after
+  end
+
+  -- Insert the header above the current line.
+  vim.api.nvim_buf_set_lines(0, row - 1, row - 1, false, {
+    comment(border),
+    comment(" "),
+    comment(border),
+  })
+
+  -- Place the cursor inside the middle comment, ready to type.
+  vim.api.nvim_win_set_cursor(0, { row + 1, #indent + #before })
+  vim.cmd("startinsert")
+end, { desc = "Add Header Comment" })
 -- Move between buffers
 vim.keymap.set('n', '<C-h>', '<C-w>h')
 vim.keymap.set('n', '<C-j>', '<C-w>j')
