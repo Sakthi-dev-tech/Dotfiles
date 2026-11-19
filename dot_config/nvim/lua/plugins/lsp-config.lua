@@ -1,122 +1,128 @@
 return {
-  {
-    "mason-org/mason.nvim",
-    opts = {},
-  },
+    {
+        "mason-org/mason.nvim",
+        opts = {},
+    },
 
-  {
-    "neovim/nvim-lspconfig",
-    dependencies = { "saghen/blink.cmp" },
-    config = function()
-      local capabilities = require("blink.cmp").get_lsp_capabilities()
-      local servers = {
-        "html",
-        "cssls",
-        "pyright",
-        "tsc",
-        "jdtls",
-        "rust_analyzer",
-        "clangd",
-        "qmlls",
-        "lua_ls",
-      }
+    {
+        "neovim/nvim-lspconfig",
+        dependencies = { "saghen/blink.cmp" },
+        config = function()
+            local capabilities = require("blink.cmp").get_lsp_capabilities()
+            local servers = {
+                "html",
+                "cssls",
+                "pyright",
+                "tsc",
+                "jdtls",
+                "rust_analyzer",
+                "clangd",
+                "qmlls",
+                "lua_ls",
+            }
 
-      for _, server in ipairs(servers) do
-        vim.lsp.config(server, { capabilities = capabilities })
-      end
+            for _, server in ipairs(servers) do
+                vim.lsp.config(server, { capabilities = capabilities })
+            end
 
-      vim.lsp.config("qmlls", {
-        cmd = { 'qmlls6' }, -- Change to 'qmlls6' if using a specific Qt6 binary
-        filetypes = { 'qml', 'qmljs' },
-        root_markers = { '.git', 'qmldir' },
-        single_file_support = true,
-      })
-
-      vim.lsp.enable(servers)
-
-      vim.diagnostic.config({
-        virtual_text = true,
-        signs = false,
-        underline = true,
-        update_in_insert = false,
-        severity_sort = true,
-        float = {
-          border = "rounded",
-        },
-      })
-
-      vim.api.nvim_create_autocmd("LspAttach", {
-        callback = function()
-          vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-          vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-          vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
-          vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Actions" })
-
-          vim.keymap.set("n", "[d", function()
-            vim.diagnostic.jump({ count = -1, float = true })
-          end, { desc = "Previous diagnostic" })
-
-          vim.keymap.set("n", "]d", function()
-            vim.diagnostic.jump({ count = 1, float = true })
-          end, { desc = "Next diagnostic" })
-
-          vim.keymap.set("n", "]e", function()
-            vim.diagnostic.jump({
-              count = 1,
-              float = true,
-              severity = vim.diagnostic.severity.ERROR,
+            vim.lsp.config("qmlls", {
+                cmd = { "qmlls6" }, -- Change to 'qmlls6' if using a specific Qt6 binary
+                filetypes = { "qml", "qmljs" },
+                root_markers = { ".git", "qmldir" },
+                single_file_support = true,
             })
-          end, { desc = "Next error" })
 
-          vim.keymap.set("n", "[e", function()
-            vim.diagnostic.jump({
-              count = -1,
-              float = true,
-              severity = vim.diagnostic.severity.ERROR,
-            })
-          end, { desc = "Previous error" })
+            vim.lsp.enable(servers)
 
-          vim.keymap.set("n", "]w", function()
-            vim.diagnostic.jump({
-              count = 1,
-              float = true,
-              severity = vim.diagnostic.severity.WARN,
+            vim.diagnostic.config({
+                virtual_text = true,
+                signs = false,
+                underline = true,
+                update_in_insert = false,
+                severity_sort = true,
+                float = {
+                    border = "rounded",
+                },
             })
-          end, { desc = "Next warning" })
 
-          vim.keymap.set("n", "[w", function()
-            vim.diagnostic.jump({
-              count = -1,
-              float = true,
-              severity = vim.diagnostic.severity.WARN,
+            vim.api.nvim_create_autocmd("LspAttach", {
+                callback = function(event)
+                    -- Enable ghost type declarations
+                    local client = vim.lsp.get_client_by_id(event.data.client_id)
+                    if client and client:supports_method("textDocument/inlayHint") then
+                        vim.lsp.inlay_hint.enable(true, { bufnr = event.buf })
+                    end
+
+                    vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+                    vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+                    vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+                    vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Actions" })
+
+                    vim.keymap.set("n", "[d", function()
+                        vim.diagnostic.jump({ count = -1, float = true })
+                    end, { desc = "Previous diagnostic" })
+
+                    vim.keymap.set("n", "]d", function()
+                        vim.diagnostic.jump({ count = 1, float = true })
+                    end, { desc = "Next diagnostic" })
+
+                    vim.keymap.set("n", "]e", function()
+                        vim.diagnostic.jump({
+                            count = 1,
+                            float = true,
+                            severity = vim.diagnostic.severity.ERROR,
+                        })
+                    end, { desc = "Next error" })
+
+                    vim.keymap.set("n", "[e", function()
+                        vim.diagnostic.jump({
+                            count = -1,
+                            float = true,
+                            severity = vim.diagnostic.severity.ERROR,
+                        })
+                    end, { desc = "Previous error" })
+
+                    vim.keymap.set("n", "]w", function()
+                        vim.diagnostic.jump({
+                            count = 1,
+                            float = true,
+                            severity = vim.diagnostic.severity.WARN,
+                        })
+                    end, { desc = "Next warning" })
+
+                    vim.keymap.set("n", "[w", function()
+                        vim.diagnostic.jump({
+                            count = -1,
+                            float = true,
+                            severity = vim.diagnostic.severity.WARN,
+                        })
+                    end, { desc = "Previous warning" })
+                    vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Diagnostics list" })
+                end,
             })
-          end, { desc = "Previous warning" })
-          vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Diagnostics list" })
         end,
-      })
-    end,
-  },
+    },
 
-  {
-    "mason-org/mason-lspconfig.nvim",
-    dependencies = {
-      "mason-org/mason.nvim",
-      "neovim/nvim-lspconfig",
+    {
+        "mason-org/mason-lspconfig.nvim",
+        dependencies = {
+            "mason-org/mason.nvim",
+            "neovim/nvim-lspconfig",
+        },
+        opts = {
+            ensure_installed = {
+                "html",
+                "cssls",
+                "pyright",
+                "tsc",
+                "jdtls",
+                "rust_analyzer",
+                "clangd",
+                "qmlls",
+                "lua_ls",
+            },
+            automatic_install = true,
+            automatic_enable = true,
+        },
     },
-    opts = {
-      ensure_installed = {
-        "html",
-        "cssls",
-        "pyright",
-        "tsc",
-        "jdtls",
-        "rust_analyzer",
-        "clangd",
-        "qmlls",
-        "lua_ls",
-      },
-      automatic_install = true,
-      automatic_enable = true,
-    },
-  },
 }
