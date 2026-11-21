@@ -12,9 +12,5 @@
     "npm:@dietrichgebert/ponytail",
     "npm:@plannotator/pi-extension"
   ],
-  "enabledModels": [
-    "openai-codex/gpt-5.6-sol",
-    "openai-codex/gpt-5.6-terra",
-    "openai-codex/gpt-5.5"
-  ]
+  "enabledModels": []
 }
