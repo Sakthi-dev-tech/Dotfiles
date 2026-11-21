@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.80.7",
+  "lastChangelogVersion": "1.6.0",
   "theme": "dark",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.6-sol",
@@ -9,8 +9,18 @@
     "npm:pi-mcp-adapter",
     "npm:pi-subagents",
     "npm:@juicesharp/rpiv-todo",
-    "npm:@dietrichgebert/ponytail",
-    "npm:@plannotator/pi-extension"
+    "npm:@dietrichgebert/ponytail"
   ],
-  "enabledModels": []
+  "enabledModels": [
+    "openai-codex/gpt-6-astra",
+    "openai-codex/gpt-6.1-sol"
+  ],
+  "extensionChangelogVersions": {
+    "{\"source\":\"npm:pi-web-access\",\"scope\":\"user\"}": "0.48.0",
+    "{\"source\":\"npm:pi-mcp-adapter\",\"scope\":\"user\"}": "7.0.1",
+    "{\"source\":\"npm:pi-subagents\",\"scope\":\"user\"}": "0.89.1"
+  },
+  "extensions": [
+    "-builtin:mcp"
+  ]
 }
