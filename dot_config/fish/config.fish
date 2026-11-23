@@ -32,6 +32,9 @@ set -gx VISUAL nvim
 # opencode
 fish_add_path /home/sakthi/.opencode/bin
 
+# rive
+fish_add_path ~/.rive/bin
+
 # Bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
