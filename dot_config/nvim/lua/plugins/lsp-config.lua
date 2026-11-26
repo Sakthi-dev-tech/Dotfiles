@@ -15,10 +15,10 @@ return {
                 "pyright",
                 "tsc",
                 "jdtls",
-                "rust_analyzer",
                 "clangd",
                 "qmlls",
                 "lua_ls",
+                "zls"
             }
 
             for _, server in ipairs(servers) do
@@ -116,10 +116,10 @@ return {
                 "pyright",
                 "tsc",
                 "jdtls",
-                "rust_analyzer",
                 "clangd",
                 "qmlls",
                 "lua_ls",
+                "zls"
             },
             automatic_install = true,
             automatic_enable = true,
